@@ -4,26 +4,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Museum</title>
+  <title>Favorite Music</title>
   <link rel="stylesheet" type="text/css" href="/css/jass.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
 <body>
   <header>
-    <h1>Tech Blog</h1>
+    <h1>Your Favorite Music</h1>
   </header>
   <nav>
     <a href="/">Home</a>
     {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
+    <a id="logout">Logout</a>
     {{else}}
     <a href="/login">Login</a>
     {{/if}}
+    <a href="/artist">Artists</a>
+    <a href="/song">Songs</a>
+    <a href="/album">Albums</a>
   </nav>
   <main>
     <aside>
-      <h2>Login to start blogging!!</h2>
+      <h2>Login to start searching!!</h2>
     </aside>
     <div class="gallery">
       {{{body}}}
