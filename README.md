@@ -1,2 +1,2 @@
 # FavoriteBand-Project2
-Favorite Band
+Favorite Band project 
