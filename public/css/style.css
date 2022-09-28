@@ -167,3 +167,19 @@ img {
 .artistSearch {
   text-align: center;
 }
+
+/* .dashBoxes {
+  display: flex;
+} */
+
+.dashContent {
+  border: 4px solid black;
+  margin: 10px;
+  height: 318px;
+  padding: 20px;
+  width: 470px;
+}
+
+.sideTitle {
+  padding-top: 85px;
+}
