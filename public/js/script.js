@@ -22,7 +22,21 @@ function getArtist (artistSearch) {
             console.log(albumName)
         }
         )
+    };
+
+
+
+    function albums (artistSearch){
+        let requestUrl = "https://theaudiodb.com/api/v1/json/523532/searchalbum.php?s=" + artistSearch;
+
+        fetch(requestUrl)
+        .then(function (response){
+            return response.json();
+        })
     }
+    
+    
+
 getArtist();
 getResults();
 document.addEventListener("keydown", function(event){
