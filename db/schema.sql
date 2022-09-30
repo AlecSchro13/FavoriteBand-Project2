@@ -1,4 +1,3 @@
 DROP DATABASE IF EXISTS userMusic_db;
 
 CREATE DATABASE userMusic_db;
-
