@@ -1,7 +1,7 @@
 
 let searchButton = document.getElementById('searchBtn')
 let artist = document.getElementById('artistSearch')
-
+let artistSearchEl = getElementById('albumSearch')
 
 function Results () {
     let inputText = document.querySelector(".searchArtist").value;
@@ -27,6 +27,8 @@ function Results () {
 
                 console.log(getGenre);
                 console.log(artistStyle);
+
+
             }
             )
         };
