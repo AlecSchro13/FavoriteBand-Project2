@@ -20,17 +20,17 @@
     <a id="logout">Logout</a>
     <a href="/artist">Artists</a>
     <a href="/song">Songs</a>
-    <a href="/album">Albums</a>
+    {{!-- <a href="/album">Albums</a> --}}
     {{else}}
     <a href="/login">Home</a>
     <a href="/login">Login</a>
     {{/if}}
   </nav>
   <main>
+    {{#if loggedIn}}
+    <h2 class="sideTitle">Welcome to your Dashboard!</h2>
+    {{else}}
     <aside>
-      {{#if loggedIn}}
-      <h2 class="sideTitle">Welcome to your Dashboard!</h2>
-      {{else}}
       <h2 class="sideTitle">Login to start searching!!</h2>
       {{/if}}
     </aside>

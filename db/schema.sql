@@ -1,3 +1,7 @@
 DROP DATABASE IF EXISTS userMusic_db;
 
+<<<<<<< HEAD
+CREATE DATABASE usermusic_db;
+=======
 CREATE DATABASE userMusic_db;
+>>>>>>> 6415f3f428a9c6c2d6596f1960d4405432759466
