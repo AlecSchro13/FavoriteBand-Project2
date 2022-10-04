@@ -11,10 +11,6 @@ Song.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    artist: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    }
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -36,5 +32,7 @@ Song.init(
     modelName: 'artist',
   }
 );
+
+
 
 module.exports = Song;
