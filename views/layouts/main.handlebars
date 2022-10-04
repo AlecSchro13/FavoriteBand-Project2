@@ -27,10 +27,10 @@
     {{/if}}
   </nav>
   <main>
+    {{#if loggedIn}}
+    <h2 class="sideTitle">Welcome to your Dashboard!</h2>
+    {{else}}
     <aside>
-      {{#if loggedIn}}
-      <h2 class="sideTitle">Welcome to your Dashboard!</h2>
-      {{else}}
       <h2 class="sideTitle">Login to start searching!!</h2>
       {{/if}}
     </aside>
