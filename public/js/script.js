@@ -1,5 +1,14 @@
 
-
+let searchButton = document.getElementById('searchBtn');
+let artistInfo = document.getElementById('artistInfo');
+let artist = document.getElementById('artist');
+let searchPage = document.getElementById('searchPage');
+// let  = document.getElementById('searchBtn');
+// let searchButton = document.getElementById('searchBtn');
+// let searchButton = document.getElementById('searchBtn');
+// let searchButton = document.getElementById('searchBtn');
+// let searchButton = document.getElementById('searchBtn');
+// let searchButton = document.getElementById('searchBtn');
 
 function getResults (){
 let inputText = document.getElementById("song-search").value;
@@ -9,8 +18,8 @@ if(!artistSearch){
 }
 }
 
-function getArtist (artistSearch) {
-    let requestUrl = "https://theaudiodb.com/api/v1/json/EFDDA/searchalbum.php?s=" + artistSearch;
+function getArtist () {
+    let requestUrl = "https://www.theaudiodb.com/api/v1/json/523532/search.php?s=drake";
     
     
         fetch(requestUrl).then(function (response){
@@ -18,8 +27,13 @@ function getArtist (artistSearch) {
 
         })
         .then (function(data){
-            albumName = data.album[x].strAlbum;
-            console.log(albumName)
+           let artistName = data.artists[0].strArtist;
+            console.log(artistName);
+            let getGenre = data.artists[0].strGenre;
+            let artistStyle = data.artists[0].strStyle;
+
+            console.log(getGenre);
+            console.log(artistStyle);
         }
         )
     };
@@ -35,13 +49,16 @@ function getArtist (artistSearch) {
             getGenre = data.artists[x].strGenre;
             console.log(artistName);
             console.log(getGenre);
+            artistStyle = data.artists[x].strStyle;
+            console.log(artistStyle);
+
         })
 
-    }
+    };
 
 
     function albums (artistSearch){
-        let requestUrl = "https://theaudiodb.com/api/v1/json/523532/searchalbum.php?s=" + artistSearch;
+        let requestUrl = "https://theaudiodb.com/api/v1/json/523532/searchalbum.php?s=drake";
 
         fetch(requestUrl)
         .then(function (response){
@@ -66,4 +83,4 @@ document.addEventListener("keydown", function(event){
 });
 
 
-searchButton.addEventListener("click", getArtist);
+searchButton.addEventListener("click", searchArtist);
