@@ -1,6 +1,6 @@
 
 let searchButton = document.getElementById("searchBtn")
-// let artist = document.getElementById('artistSearch')
+let artistInfo = document.getElementById('artistInfo')
 // let artistSearchEl = getElementById('artistSearchEl')
 
 function Results () {
@@ -29,8 +29,20 @@ function Results () {
                 let getGenre = data.artists[0].strGenre;
                 let artistStyle = data.artists[0].strStyle;
 
+
                 console.log(getGenre);
                 console.log(artistStyle);
+                
+
+                let artistNameEL = document.createElement('li')
+                let artistGenreEL = document.createElement('li')
+                let artistStyleEL = document.createElement('li')
+
+                artistNameEL.textContent = "Artist: " + artistName;
+                artistGenreEL.textContent = "Genre: " + getGenre; 
+                artistStyleEL.textContent = "Style: " + artistStyle;
+
+                artistInfo.append(artistNameEL);
 
 
             }
