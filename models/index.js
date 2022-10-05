@@ -1,10 +1,10 @@
 const User = require('./User');
 
 module.exports = { User };
-const app = express()
+// const app = express()
 
-app.get('/', (req, res) => {
-  res.send('Welcome')
-})
-console.log(User)
-app.listen(3000)
+// app.get('/', (req, res) => {
+//   res.send('Welcome')
+// })
+// console.log(User)
+// app.listen(3000)
