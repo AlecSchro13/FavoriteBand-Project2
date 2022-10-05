@@ -1,14 +1,18 @@
 
-let searchButton = document.getElementById('searchBtn')
+let searchButton = document.getElementById("searchBtn")
 // let artist = document.getElementById('artistSearch')
 // let artistSearchEl = getElementById('artistSearchEl')
 
 function Results () {
     let inputText = document.getElementById("searchVal").value;
-    let artistSearch = inputText.trim;
+    let artistSearch = inputText;
     if(!artistSearch){
         return;
     }
+    $('input[type="text"]').val('')
+    albums(artistSearch);
+    getArtist(artistSearch)
+    songs(artistSearch)
 }
     
     function getArtist (artistSearch) {
