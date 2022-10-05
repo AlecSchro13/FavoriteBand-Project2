@@ -2,7 +2,12 @@
 <header class="pageTitle">
     <h3 class="titleText">Search for your favorite artist</h3>
 </header>
-<div>
-    <input type="text" class="searchArtist" name="name">
+
+<div class="input-group mb-3">
+    <input type="text" class="form-control" id="searchVal" placeholder="Search For an Artist!"
+        aria-label="Recipient's username" aria-describedby="button-addon2">
+    <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button" id="searchBtn">Search!</button>
+    </div>
 </div>
 {{/if}}

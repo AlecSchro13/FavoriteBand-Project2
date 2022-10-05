@@ -1,14 +1,18 @@
 
-let searchButton = document.getElementById('searchBtn')
-let artist = document.getElementById('artistSearch')
-
+let searchButton = document.getElementById("searchBtn")
+// let artist = document.getElementById('artistSearch')
+// let artistSearchEl = getElementById('artistSearchEl')
 
 function Results () {
-    let inputText = document.querySelector(".searchArtist").value;
-    let artistSearch = inputText.trim;
+    let inputText = document.getElementById("searchVal").value;
+    let artistSearch = inputText;
     if(!artistSearch){
         return;
     }
+    $('input[type="text"]').val('')
+    albums(artistSearch);
+    getArtist(artistSearch)
+    songs(artistSearch)
 }
     
     function getArtist (artistSearch) {
@@ -27,49 +31,50 @@ function Results () {
 
                 console.log(getGenre);
                 console.log(artistStyle);
+
+
             }
             )
         };
     
     
-        function albums (){
-            let requestUrl = "https://theaudiodb.com/api/v1/json/523532/searchalbum.php?s=Drake";
+        function albums (artistSearch){
+            let requestUrl = "https://theaudiodb.com/api/v1/json/523532/searchalbum.php?s=" + artistSearch;
     
             fetch(requestUrl)
             .then(function (response){
                 return response.json();
             }).then (function(data){
-                for (let x = 0; x < data.album.length; x++)
-                albumName = data.album[x].strAlbum;
+                // for (let x = 0; x < data.album.length; x++)
+                albumName = data.album[0].strAlbum;
             console.log(albumName);
-                console.log(data.album[1]);
+                
             })
         }
         
 
 
-    function songs() {
-        let requestUrl = "https://theaudiodb.com/api/v1/json/523532/track.php?m=drake";
+    function songs(artistSearch) {
+        let requestUrl = "https://theaudiodb.com/api/v1/json/523532/track.php?m=" + artistSearch;
         fetch(requestUrl)
             .then(function (response){
                 return response.json();
             }).then (function(data){
                 let trackName = data.track[0].strTrack;
-                console.log(trackName);
+                console.log(data);
 
     })
 };
-    songs()  
-    albums();
-    getArtist();
-    // getResults();
+    // songs()  
+    // albums();
+    // getArtist();
     document.addEventListener("keydown", function(event){
         if(event.key == "Enter"){
             console.log('hello')
-            getResults();
+            Results();
             $('input[type="text"]').val('');
         }
     });
     
     
-    // searchButton.addEventListener("click", searchArtist);
+    searchButton.addEventListener("click", Results);
