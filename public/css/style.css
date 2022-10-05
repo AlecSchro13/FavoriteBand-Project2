@@ -194,3 +194,7 @@ img {
 .titleText {
   font-size: 40px;
 }
+
+.btnHandle {
+  margin: 0px 14px;
+}
