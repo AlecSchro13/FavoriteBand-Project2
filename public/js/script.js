@@ -1,10 +1,10 @@
 
 let searchButton = document.getElementById('searchBtn')
-let artist = document.getElementById('artistSearch')
-let artistSearchEl = getElementById('artistSearchEl')
+// let artist = document.getElementById('artistSearch')
+// let artistSearchEl = getElementById('artistSearchEl')
 
 function Results () {
-    let inputText = document.querySelector(".searchArtist").value;
+    let inputText = document.getElementById("searchVal").value;
     let artistSearch = inputText.trim;
     if(!artistSearch){
         return;
