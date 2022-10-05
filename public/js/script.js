@@ -1,6 +1,11 @@
 
+
 // let searchButton = document.getElementById("searchBtn")
 // let artist = document.getElementById('artistSearch')
+
+let searchButton = document.getElementById("searchBtn")
+let artistInfo = document.getElementById('artistInfo')
+
 // let artistSearchEl = getElementById('artistSearchEl')
 
 function Results() {
@@ -15,8 +20,60 @@ function Results() {
     songs(artistSearch)
 }
 
+
 function getArtist(artistSearch) {
     let requestUrl = "https://www.theaudiodb.com/api/v1/json/523532/search.php?s=" + artistSearch;
+
+    
+    function getArtist (artistSearch) {
+        let requestUrl = "https://www.theaudiodb.com/api/v1/json/523532/search.php?s=" + artistSearch;
+        
+        
+            fetch(requestUrl).then(function (response){
+                return response.json();
+    
+            })
+            .then (function(data){
+               let artistName = data.artists[0].strArtist;
+                console.log(artistName);
+                let getGenre = data.artists[0].strGenre;
+                let artistStyle = data.artists[0].strStyle;
+
+
+                console.log(getGenre);
+                console.log(artistStyle);
+                
+
+                let artistNameEL = document.createElement('li')
+                let artistGenreEL = document.createElement('li')
+                let artistStyleEL = document.createElement('li')
+
+                artistNameEL.textContent = "Artist: " + artistName;
+                artistGenreEL.textContent = "Genre: " + getGenre; 
+                artistStyleEL.textContent = "Style: " + artistStyle;
+
+                artistInfo.append(artistNameEL);
+
+
+            }
+            )
+        };
+    
+    
+        function albums (artistSearch){
+            let requestUrl = "https://theaudiodb.com/api/v1/json/523532/searchalbum.php?s=" + artistSearch;
+    
+            fetch(requestUrl)
+            .then(function (response){
+                return response.json();
+            }).then (function(data){
+                // for (let x = 0; x < data.album.length; x++)
+                albumName = data.album[0].strAlbum;
+            console.log(albumName);
+                
+            })
+        }
+        
 
 
     fetch(requestUrl).then(function (response) {
