@@ -61,7 +61,7 @@ function Results () {
                 return response.json();
             }).then (function(data){
                 let trackName = data.track[0].strTrack;
-                console.log(trackName);
+                console.log(data);
 
     })
 };
