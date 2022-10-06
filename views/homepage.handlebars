@@ -2,8 +2,10 @@
 {{> gallery-details}}
 {{/each}} --}}
 {{#if loggedIn}}
+<header class="pageTitle">
+    <h3 class="titleText">Your Music Dashboard</h3>
+</header>
 <div class="artistSearch">
-    <h3>Your Music Dashboard</h3>
     <div class="dashBoxes">
         <div class="dashContent">
             <h2><u>Favorite Artists:</u></h2>
@@ -11,9 +13,9 @@
         <div class="dashContent">
             <h2><u>Favorite Songs:</u></h2>
         </div>
-        <div class="dashContent">
+        {{!-- <div class="dashContent">
             <h2><u>Favorite Albums:</u></h2>
-        </div>
+        </div> --}}
     </div>
 </div>
 {{/if}}
