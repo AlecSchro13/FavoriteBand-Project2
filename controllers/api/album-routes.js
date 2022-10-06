@@ -1,11 +1,11 @@
 const router = require('express').Router();
 
-const { Artist } = require('../../models');
+const { Album } = require('../../models');
 
 router.post('/', async (req, res) => {
     console.log("hello world!")
     try {
-        const dbArtistData = await Artist.create({
+        const dbArtistData = await Album.create({
             name: req.body.name,
             album: req.body.album
         });

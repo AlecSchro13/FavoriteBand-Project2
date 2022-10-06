@@ -1,6 +1,6 @@
 const User = require('./User');
-
-module.exports = { User };
+const Artist = require('./artist')
+module.exports = { User, Artist };
 // const app = express()
 
 // app.get('/', (req, res) => {
