@@ -14,19 +14,25 @@
     <h1>Your Favorite Music</h1>
   </header>
   <nav>
-    <a href="/">Home</a>
+
     {{#if loggedIn}}
+    <a href="/">Home</a>
     <a id="logout">Logout</a>
-    {{else}}
-    <a href="/login">Login</a>
-    {{/if}}
     <a href="/artist">Artists</a>
     <a href="/song">Songs</a>
     <a href="/album">Albums</a>
+    {{else}}
+    <a href="/login">Home</a>
+    <a href="/login">Login</a>
+    {{/if}}
   </nav>
   <main>
     <aside>
-      <h2>Login to start searching!!</h2>
+      {{#if loggedIn}}
+      <h2 class="sideTitle">Welcome to your Dashboard!</h2>
+      {{else}}
+      <h2 class="sideTitle">Login to start searching!!</h2>
+      {{/if}}
     </aside>
     <div class="gallery">
       {{{body}}}

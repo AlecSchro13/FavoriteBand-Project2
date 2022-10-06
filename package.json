@@ -1,7 +1,7 @@
 {
   "name": "museum-paintings",
   "version": "1.0.0",
-  "description": "",
+  "description": "Favorite Band project",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,11 +18,20 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
+    "gentelella": "^1.4.0",
     "handlebars": "^4.7.6",
-    "mysql2": "^2.2.5",
+    "mysql2": "^2.3.3",
     "sequelize": "^6.3.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlecSchro13/FavoriteBand-Project2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AlecSchro13/FavoriteBand-Project2/issues"
+  },
+  "homepage": "https://github.com/AlecSchro13/FavoriteBand-Project2#readme"
 }

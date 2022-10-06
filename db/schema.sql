@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS developer_db;
+DROP DATABASE IF EXISTS userMusic_db;
 
-CREATE DATABASE developer_db
+CREATE DATABASE usermusic_db;
