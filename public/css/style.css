@@ -107,7 +107,7 @@ img {
 
 /* CARDS */
 .card {
-  margin: 20px;
+  margin: 25px;
   flex: 0 1 300px;
   border: 7px double var(--dark);
   border-radius: 10px;
