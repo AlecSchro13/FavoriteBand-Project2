@@ -30,7 +30,11 @@ Welcome to your Favorite Band Music APP!!!
 
 # Description
 <p>&nbsp;</p>
+
  When the user opens the deployed app they are greeted with a sign up/login page for the user to create an account. On the navigation bar, the user has the options to search a specific artist, album or song of their choice. Once the search has been populated the user has the option to add that to their personal dashboard. On the dashboard for each profile, the added searches are saved as the users favorite, whether its an artist album or both.
+
+ When the user opens the deployed app they are greeted with a sign up/login page for the user to create an account. Afterwards the pages are for the user to go ahead and add music and artist they like.
+
  <br>
  <br>
 
@@ -74,6 +78,14 @@ https://getbootstrap.com/
 <br>
 <p>&nbsp;</p>
 Audiodb:
+
+https://bulma.io/
+<br>
+<p>&nbsp;</p>
+https://getbootstrap.com/
+<br>
+<p>&nbsp;</p>
+
 https://theaudiodb.com
 <p>&nbsp;</p>
 
@@ -96,8 +108,13 @@ https://github.com/AlecSchro13/FavoriteBand-Project2
 <p>&nbsp;</p>
 
 # Acknowledgments
+
 Dan Kaltenbaugh (Instructor)<br>
 Kirtley Adams (Teaching Assistant) <br>
+
+Kirtley Adams (Teaching Assistant) <br>
+Dan Kaltenbaugh (Instructor)<br>
+
 George Yoo (Teaching Assisstant)
 
 # License

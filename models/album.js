@@ -33,4 +33,7 @@ Album.init(
   }
 );
 
+
 module.exports = Album;
+module.exports = Album;
+
