@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const { Gallery, Painting } = require('../models');
+const { Artist } = require('../models');
 
 // GET all galleries for homepage
 router.get('/', async (req, res) => {
-  try {
+  try { 
     res.render('homepage', {
       // galleries,
       loggedIn: req.session.loggedIn,
@@ -16,13 +16,18 @@ router.get('/', async (req, res) => {
 
 router.get('/artist', async (req, res) => {
   try {
+    const artistData = await Artist.findAll({})
+   const artists = artistData.map((artist) => artist.get({plain: true})
+   ) 
+   console.log(artists)
     res.render('artist', {
+      artists,
       // galleries,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
     console.log(err);
-    res.status(500).json(err);
+    res.status(419).json(err);
   }
 });
 
@@ -49,46 +54,6 @@ router.get('/song', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-// // GET one gallery
-// router.get('/gallery/:id', async (req, res) => {
-//   try {
-//     const dbGalleryData = await Gallery.findByPk(req.params.id, {
-//       include: [
-//         {
-//           model: Painting,
-//           attributes: [
-//             'id',
-//             'title',
-//             'artist',
-//             'exhibition_date',
-//             'filename',
-//             'description',
-//           ],
-//         },
-//       ],
-//     });
-
-//     const gallery = dbGalleryData.get({ plain: true });
-//     res.render('gallery', { gallery, loggedIn: req.session.loggedIn });
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).json(err);
-//   }
-// });
-
-// // GET one painting
-// router.get('/painting/:id', async (req, res) => {
-//   try {
-//     const dbPaintingData = await Painting.findByPk(req.params.id);
-
-//     const painting = dbPaintingData.get({ plain: true });
-//     res.render('painting', { painting, loggedIn: req.session.loggedIn });
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).json(err);
-//   }
-// });
 
 // Login route
 router.get('/login', (req, res) => {
