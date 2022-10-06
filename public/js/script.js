@@ -57,11 +57,24 @@ function getArtist(artistSearch) {
                 // for (let x = 0; x < data.album.length; x++)
                 albumName = data.album[0].strAlbum;
             console.log(albumName);
-                
-            })
-        }
-        
+              
+            fetch("/api/albums/", {
+                method: "POST",
+                body: JSON.stringify({
+                    name: artistName,
+                    album: albumName,
+                }),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
 
+            document.location.replace("/artist")
+
+        }
+        )
+
+};
 
     fetch(requestUrl).then(function (response) {
         return response.json();
